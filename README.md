@@ -1,1 +1,0 @@
-# movcom-tohasa-paspuezan-cristhian-fernando
