@@ -74,7 +74,6 @@ fun main() {
         sueldo = 1000.00
     )
 
-
     // Tipos de Arreglos
 
     // Arreglo Estatico
@@ -89,7 +88,6 @@ fun main() {
     println(arregloDinamico)
 
     // OPERADORES -> Sirven para los arreglos estáticos y dinámicos
-
 
     // FOR EACH -> Unit
     // Iterar un arreglo
@@ -119,10 +117,7 @@ fun main() {
 //        .map { valorActual: Int ->
 //            return@map valorActual + 15
 //        }
-
     println(respuestaMapDos)
-
-
 
     // Filter -> FILTRAR EL ARREGLO
     // 1) Devolver una expresion (TRUE o FALSE)
@@ -135,7 +130,6 @@ fun main() {
     val respuestaFilterDos = arregloDinamico.filter { it <= 5 }
     println(respuestaFilter)
     println(respuestaFilterDos)
-
 
     // OR AND
     // OR ->  ANY (Alguno cumple?)
@@ -175,7 +169,8 @@ fun main() {
     val respuestaReduceFold = arregloDanio
         .fold(
             100, // acumulado inicial
-            { acumulado, valorActualIteracion ->
+            {
+                acumulado, valorActualIteracion ->
                 return@fold acumulado - valorActualIteracion
             }
         )
@@ -187,7 +182,6 @@ fun main() {
         .fold(100.00, { acc, i -> acc - i }) // valor
         .also { println(it) } // ejecutar codigo extra
     println("Valor vida actual ${vidaActual}") // 3.4
-
 
     // CLASES
     val ejemploUno = Suma(1, 2)
@@ -226,12 +220,9 @@ fun calcularSueldo(
     }
 }
 
-
-
 abstract class NumerosJava {
     protected val numeroUno: Int // Propiedad clase
     private val numeroDos: Int // Propiedad clase
-
     constructor(
         uno: Int,   // Parametros requeridos
         dos: Int,   // Parametros requeridos
@@ -245,7 +236,6 @@ abstract class NumerosJava {
 
 }
 
-
 abstract class Numeros(
     // Constructor Primario
     protected var numeroUno: Int, // Propiedad clase
@@ -257,7 +247,6 @@ abstract class Numeros(
 }
 // instancia.numeroUno
 // instancia.numeroDos
-
 
 class Suma(
     // Constructor primario
@@ -273,7 +262,6 @@ class Suma(
         // X -> this.uno -> NO EXISTEN
         // X -> this.dos -> NO EXISTEN
     }
-
     constructor( //  Segundo constructor
         uno: Int?, // parametros
         dos: Int // parametros
@@ -283,7 +271,6 @@ class Suma(
     ){
         // bloque codigo segundo constructor
     }
-
     constructor( //  Tercer constructor
         uno: Int, // parametros
         dos: Int? // parametros
@@ -294,7 +281,6 @@ class Suma(
     ){
         // bloque codigo tercer constructor
     }
-
     constructor( //  Cuarto constructor
         uno: Int?, // parametros
         dos: Int? // parametros
@@ -305,7 +291,6 @@ class Suma(
     ){
         // bloque codigo cuarto constructor
     }
-
     // public fun sumar(): Int {
     fun sumar(): Int {
         // val total: Int = this.numeroUno + this.numeroDos
@@ -321,21 +306,4 @@ class Suma(
             historialSumas.add(valorNuevaSuma)
         }
     }
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
