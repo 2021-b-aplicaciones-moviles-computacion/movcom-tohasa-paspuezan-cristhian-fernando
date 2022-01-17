@@ -29,4 +29,15 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <Button
+        android:id="@+id/btn_ir_list_view"
+        android:layout_width="129dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:text="LIST VIEW"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ir_ciclo_vida"
+        app:layout_constraintHorizontal_bias="0.611"
+        app:layout_constraintStart_toStartOf="@+id/btn_ir_ciclo_vida"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_ciclo_vida" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
