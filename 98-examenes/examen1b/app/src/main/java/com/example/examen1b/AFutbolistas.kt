@@ -15,7 +15,6 @@ class AFutbolistas : AppCompatActivity() {
     var itemSelected = 0
 
     override fun onCreate( savedInstanceState: Bundle? ) {
-
         super.onCreate( savedInstanceState )
         setContentView( R.layout.activity_afutbolista )
         val listView = findViewById<ListView>( R.id.lv_futbolistas )
