@@ -31,8 +31,8 @@
 
     <Button
         android:id="@+id/btn_ir_list_view"
-        android:layout_width="129dp"
-        android:layout_height="44dp"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:text="LIST VIEW"
         app:layout_constraintEnd_toEndOf="@+id/btn_ir_ciclo_vida"

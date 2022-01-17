@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
 
@@ -12,10 +13,12 @@ class MainActivity : AppCompatActivity() {
     val CODIGO_RESPUESTA_INTENT_EXPLICITO = 401
     var resultLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
-    ) {
-            result ->
+    ) { result ->
         if ( result.resultCode == Activity.RESULT_OK ) {
-
+            if (result.data != null) {
+                Log.i("intent-epn", "${result.data?.getStringExtra("nombreModificado")}")
+                Log.i("intent-epn", "${result.data?.getIntExtra("edadModificado", 0)}")
+            }
         }
     }
 
@@ -59,9 +62,10 @@ class MainActivity : AppCompatActivity() {
 
         intentExplicito.putExtra( "nombre", "Adrian" )
         intentExplicito.putExtra( "apellido", "Eguez" )
-        intentExplicito.putExtra( "edad", "32" )
+        intentExplicito.putExtra( "edad", 32 )
+        intentExplicito.putExtra( "entreanador", BEntrenador( "a", "b" ) )
 
-        resultLauncher.launch( intent )
+        resultLauncher.launch( intentExplicito )
 
 //        startActivityForResult( intent, CODIGO_RESPUESTA_INTENT_EXPLICITO )
 
