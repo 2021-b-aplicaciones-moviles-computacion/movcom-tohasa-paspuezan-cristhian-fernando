@@ -1,6 +1,6 @@
-ID,Tipo,Fecha de anotacion,Penal,Minuto,Id Futbolista
-1,Derecha,Wed Dec 15 23:24:49 ECT 2021,false,87.05,1
-2,Cabeza,Wed Dec 15 23:24:49 ECT 2021,false,80.49,2
-3,Derecho,Wed Dec 15 23:24:49 ECT 2021,true,60.32,3
-4,Izquierda,Wed Dec 15 23:24:49 ECT 2021,false,86.28,4
-5,Derecha,Wed Dec 15 23:24:49 ECT 2021,true,10.45,5
+Id,Tipo,Fecha de anotacion,Penal,Minuto,Id Futbolista
+1,Derecha,Mon Jan 17 16:33:46 COT 2022,false,10.0,1
+2,Cabeza,Mon Jan 17 16:33:46 COT 2022,false,80.49,2
+3,Derecho,Mon Jan 17 16:33:46 COT 2022,true,60.32,3
+4,Izquierda,Mon Jan 17 16:33:46 COT 2022,false,86.28,4
+5,Derecha,Mon Jan 17 16:33:46 COT 2022,true,10.45,5
