@@ -1,11 +1,23 @@
 package com.example.myapplication
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
+
+    val CODIGO_RESPUESTA_INTENT_EXPLICITO = 401
+    var resultLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) {
+            result ->
+        if ( result.resultCode == Activity.RESULT_OK ) {
+
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -24,6 +36,12 @@ class MainActivity : AppCompatActivity() {
                 irActividad( BListView::class.java )
             }
 
+        val botonIntent = findViewById<Button>(R.id.btn_intent)
+        botonIntent
+            .setOnClickListener {
+                irActividadConParametros( CIntentExplicitoParametros::class.java )
+            }
+
     }
 
     fun irActividad(
@@ -31,6 +49,30 @@ class MainActivity : AppCompatActivity() {
     ) {
         val intent = Intent( this,clase )
         startActivity( intent )
+    }
+
+    fun irActividadConParametros(
+        clase: Class<*>,
+    ) {
+
+        val intentExplicito = Intent( this,clase )
+
+        intentExplicito.putExtra( "nombre", "Adrian" )
+        intentExplicito.putExtra( "apellido", "Eguez" )
+        intentExplicito.putExtra( "edad", "32" )
+
+        resultLauncher.launch( intent )
+
+//        startActivityForResult( intent, CODIGO_RESPUESTA_INTENT_EXPLICITO )
+
+//        registerForActivityResult( ActivityResultContracts.StartActivityForResult() ) {
+//            when( it.resultCode ) {
+//                Activity.RESULT_OK -> {
+//                    // Ejecutar codigo OK
+//                }
+//            }
+//        }
+
     }
 
 }
