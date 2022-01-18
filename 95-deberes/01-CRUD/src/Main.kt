@@ -2,7 +2,6 @@ import java.io.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-
 fun main() {
 
     val scanner = Scanner(System.`in`)
@@ -23,6 +22,7 @@ fun main() {
             1 -> {
                 Futbolistas.mostrarFutbolistas(Futbolistas.listaFutbolistas)
                 do {
+
                     print(
                         "Seleccione la operación a realizar\n" +
                                 "1: Ingresar Futbolista\n" +
