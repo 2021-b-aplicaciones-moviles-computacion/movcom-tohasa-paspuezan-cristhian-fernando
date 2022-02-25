@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         val botonIntent = findViewById<Button>(R.id.btn_intent)
         botonIntent
             .setOnClickListener {
-                irActividadConParametros( CIntentExplicitoParametros::class.java )
+                abrirActividadConParametros( CIntentExplicitoParametros::class.java )
             }
 
         val botonIntentImplicito = findViewById<Button>(R.id.btn_ir_intent_implicito)
@@ -95,6 +95,12 @@ class MainActivity : AppCompatActivity() {
                 startActivityForResult( intentConRespuesta, CODIGO_RESPUESTA_INTENT_IMPLICITO )
             }
 
+        val botonRecyclerView = findViewById<Button>(R.id.btn_ir_recycler_view)
+        botonRecyclerView
+            .setOnClickListener {
+                abrirActividadConParametros(GRecyclerView::class.java)
+            }
+
     }
 
     fun irActividad(
@@ -104,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         startActivity( intent )
     }
 
-    fun irActividadConParametros(
+    fun abrirActividadConParametros(
         clase: Class<*>,
     ) {
 
