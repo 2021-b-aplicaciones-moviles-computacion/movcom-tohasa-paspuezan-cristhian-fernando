@@ -30,6 +30,43 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // BASE DE DATOS SQLITE
+
+        EBaseDeDatos.TablaUsuario = ESqliteHelperUsuario(this)
+
+        if (EBaseDeDatos.TablaUsuario != null) {
+
+            val idQuemado = 2
+
+            EBaseDeDatos.TablaUsuario?.crearUsuarioFormulario(
+                "Adrian",
+                "Adrian desc"
+            )
+            var consulta = EBaseDeDatos.TablaUsuario?.consultarUsuarioPorId(
+                idQuemado
+            )
+            Log.i("bdd", "Primera Consulta: ${consulta?.nombre}")
+
+            EBaseDeDatos.TablaUsuario?.actualizarUsuarioFormulario(
+                "Vicente",
+                "Vicenet desc",
+                idQuemado
+            )
+            consulta = EBaseDeDatos.TablaUsuario?.consultarUsuarioPorId(
+                idQuemado
+            )
+            Log.i("bdd", "Primera Consulta: ${consulta?.nombre}")
+
+            EBaseDeDatos.TablaUsuario?.eliminarUsuarioFormulario(
+                idQuemado
+            )
+            consulta = EBaseDeDatos.TablaUsuario?.consultarUsuarioPorId(
+                idQuemado
+            )
+            Log.i("bdd", "Primera Consulta: ${consulta?.nombre}")
+
+        }
+
         val botonCicloVida = findViewById<Button>(R.id.btn_ir_ciclo_vida)
         botonCicloVida
             .setOnClickListener {
