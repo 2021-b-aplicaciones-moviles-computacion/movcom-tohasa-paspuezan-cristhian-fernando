@@ -1,1 +1,40 @@
-<mxfile host="app.diagrams.net" modified="2022-03-02T22:32:33.475Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.62" version="16.6.5" etag="hw0Z0nciaJryryZYOGhg" type="github"><diagram id="ws3SOK7lC3kXBEes4wMB">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-03-02T22:45:39.566Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.62" etag="kpReHVH6qNmkU9SSpTmN" version="16.6.5" type="github">
+  <diagram id="ws3SOK7lC3kXBEes4wMB" name="Page-1">
+    <mxGraphModel dx="1021" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-1" value="Colección 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-2" value="Colección 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PbQpcjPvV9Mg_tdnfzhu-3" target="PbQpcjPvV9Mg_tdnfzhu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-3" value="Cliente" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PbQpcjPvV9Mg_tdnfzhu-4" target="PbQpcjPvV9Mg_tdnfzhu-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-4" value="Género" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-5" value="Array" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="220" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-9" value="Novela" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-11" value="Novela" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="220" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="PbQpcjPvV9Mg_tdnfzhu-12" value="Autor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
