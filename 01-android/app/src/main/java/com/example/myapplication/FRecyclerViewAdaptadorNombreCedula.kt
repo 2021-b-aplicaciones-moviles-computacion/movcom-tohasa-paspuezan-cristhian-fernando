@@ -29,7 +29,9 @@ class FRecyclerViewAdaptadorNombreCedula(
             }
         }
         fun anadirLike() {
-
+            this.numeroLikes = this.numeroLikes + 1
+            likesTextView.text = this.numeroLikes.toString()
+            contexto.aumentarTotalLikes()
         }
     }
 
