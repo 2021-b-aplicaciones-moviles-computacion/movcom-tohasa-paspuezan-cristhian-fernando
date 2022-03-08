@@ -88,6 +88,7 @@ class ANovelas : AppCompatActivity() {
                 return true
             }
             R.id.mf_ver -> {
+                openActivityWithParameters( AVerNovela::class.java )
                 return true
             }
             else -> return super.onContextItemSelected( item )

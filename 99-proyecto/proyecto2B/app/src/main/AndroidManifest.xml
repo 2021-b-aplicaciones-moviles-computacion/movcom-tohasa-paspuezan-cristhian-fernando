@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto2b">
         <activity
+            android:name=".AVerNovela"
+            android:exported="false" />
+        <activity
             android:name=".AEditarNovela"
             android:exported="false" />
         <activity
