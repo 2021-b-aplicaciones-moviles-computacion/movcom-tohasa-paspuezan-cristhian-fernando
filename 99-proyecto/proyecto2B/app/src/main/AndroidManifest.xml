@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto2b">
         <activity
-            android:name=".ALibros"
+            android:name=".ACrearNovela"
+            android:exported="false" />
+        <activity
+            android:name=".ANovelas"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

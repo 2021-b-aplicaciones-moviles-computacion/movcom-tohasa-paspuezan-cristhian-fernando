@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnLibros = findViewById<Button>(R.id.btn_ir_libros)
+        val btnLibros = findViewById<Button>(R.id.btn_ir_novelas)
         btnLibros
             .setOnClickListener {
-                openActivity( ALibros::class.java )
+                openActivity( ANovelas::class.java )
             }
 
         val btnLogin = findViewById<Button>(R.id.btn_ir_login)
@@ -110,8 +110,8 @@ class MainActivity : AppCompatActivity() {
                 "uid" to uid,
                 "email" to email.toString()
             )
-            db.collection("usuario")
-                .document(email.toString()) // El identificador lo seteo yo
+            db.collection("usuarios")
+                .document(email.toString())
                 .set(nuevoUsuario)
                 .addOnSuccessListener {
                     Log.i("firebase-firestore", "Creación Exitosa")
@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity() {
             if (usuarioLocal.email != null) {
                 val db = Firebase.firestore
                 val referencia = db
-                    .collection("usuario")
+                    .collection("usuarios")
                     .document(usuarioLocal.email.toString())
                 referencia
                     .get()
