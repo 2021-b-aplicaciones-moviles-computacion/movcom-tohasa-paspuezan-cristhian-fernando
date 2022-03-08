@@ -33,9 +33,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Logout"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/btn_ir_login"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_ir_login"
         app:layout_constraintTop_toBottomOf="@+id/btn_ir_login" />
+
+    <Button
+        android:id="@+id/btn_ir_libros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Iniciar"
+        app:layout_constraintBottom_toTopOf="@+id/tv_titulo"
+        app:layout_constraintEnd_toEndOf="@+id/tv_titulo"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/tv_titulo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
