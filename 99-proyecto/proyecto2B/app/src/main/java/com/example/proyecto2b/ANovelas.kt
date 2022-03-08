@@ -3,6 +3,7 @@ package com.example.proyecto2b
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
@@ -16,6 +17,8 @@ import com.google.firebase.ktx.Firebase
 class ANovelas : AppCompatActivity() {
 
     var itemSelected = 0
+    var arrNovelasNombre = arrayListOf<String>()
+    var arrNovelasId = arrayListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -29,7 +32,6 @@ class ANovelas : AppCompatActivity() {
             }
 
         val listView = findViewById<ListView>( R.id.lv_novelas )
-        var arrNovelasNombre = arrayListOf<String>()
 
         val db = Firebase.firestore
         val novelasRef = db
@@ -40,6 +42,7 @@ class ANovelas : AppCompatActivity() {
             .addOnSuccessListener {
                 for (novela in it){
                     arrNovelasNombre.add("${novela.get("titulo").toString()}")
+                    arrNovelasId.add("${novela.id}")
                 }
                 val futAdapter = ArrayAdapter(
                     this,
@@ -81,6 +84,7 @@ class ANovelas : AppCompatActivity() {
                 return true
             }
             R.id.mf_eliminar -> {
+                delete( itemSelected )
                 return true
             }
             R.id.mf_ver -> {
@@ -94,8 +98,21 @@ class ANovelas : AppCompatActivity() {
         clase: Class<*>
     ){
         val intentNovela = Intent(this,clase)
-        intentNovela.putExtra( "posicion", itemSelected + 1)
+        intentNovela.putExtra( "id", arrNovelasId.get(itemSelected))
         startActivity( intentNovela )
+    }
+
+    fun delete(
+        itemSelected: Int
+    ){
+        val db = Firebase.firestore
+        db.collection("novelas").document(arrNovelasId.get(itemSelected))
+            .delete()
+            .addOnSuccessListener {
+                val intentNovela = Intent(this, ANovelas::class.java)
+                startActivity(intentNovela)
+            }
+            .addOnFailureListener { }
     }
 
 }
